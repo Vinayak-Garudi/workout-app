@@ -1,1 +1,1 @@
-vinaya
+vinay
