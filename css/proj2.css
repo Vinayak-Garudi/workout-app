@@ -1,0 +1,214 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation Bar */
+#navbar{
+    top: 0px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+}
+/* Navigation Bar: logo */
+
+#logo img{
+    height: 45px;
+    margin: 9px 20px;
+    border-radius: 50%;
+}
+/* Navigation Bar: list */
+#navbar ul{
+    display: flex;
+}
+#navbar::before{
+    top: 0px;
+    left: 0px;
+    content: "";
+    background-color: rgb(13, 14, 14);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: white;
+}
+#navbar ul li a:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: brown;
+}
+
+/* Home Section */
+#home{
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px 200px;
+    justify-content: center;
+    height: 560px;
+    /* position: relative; */
+}
+#home::before{
+    top: 0px;
+    left: 0px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: url('../foodb.jpg') no-repeat center center/cover;
+}
+
+#home h1{
+    color: black;
+    text-align: center;
+}
+#home p{
+    text-align: center;
+    font-size: 1.3rem;
+}
+/* Service Section */
+#services::before{
+    top: 0px;
+    left: 0px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    background: url('../foodb3.jpg') no-repeat center center/cover;
+}
+#services{
+    margin: 20px;
+    display: flex;
+    position: relative;
+}
+#services .box{
+    border: 2px solid brown;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#services .box img{
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+/* Client Section */
+#client-section{
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    background: url('../foodb4.jpg') no-repeat center center/cover;
+
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 130px;
+    border-radius: 45%;
+}
+.client-item{
+    padding: 40px;
+
+}
+/* Contact Section */
+#contact{
+    position: relative;
+    margin-top: 30px;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background: url('../contact.jpg') no-repeat center center/cover;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#contact-box form{
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Class */
+
+.primary{
+    font-size: 2.2rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-size: 1.6rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border-radius: 20px;
+    border: 2px solid burlywood;
+    background-color: whitesmoke;
+    color: brown;
+    margin-top: 10px;
+    padding-top: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.btn:hover{
+    text-decoration: underline;
+    color: whitesmoke;
+    background-color: burlywood;
+    border: 2px solid whitesmoke;
+    font-weight: 700;
+}
+.center{
+    text-align: center;
+}

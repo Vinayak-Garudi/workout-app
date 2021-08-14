@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Attributes and pseudo selectors</title>
+        <style>
+            .container{
+                margin: auto;
+                display: block;
+                width: 233px;
+            }
+            input{
+                display: block;
+            }
+            input[type="text"]{             /*to edit the text type from the input i.e. Enter Name*/
+                padding: 23px;
+                border: 2px solid red;
+            }
+            a[target]{                  /*to edit any target*/
+                font-size: 40px;
+                color: cyan;
+            }
+            a[target="_self"]{       /*to edit the particular target*/
+                font-size: 15px;
+                color: navy;
+            }
+            /* changes will apply to the 3rd item */
+            li:nth-child(3){
+                color: green;
+            }
+            /* changes will apply to every 2nd item */
+            li:nth-child(2n+0){
+                color: red;
+            }
+            /* changes will apply to odd item */
+            li:nth-child(odd){
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1><a href="http://google.com" target="_blank">Go to google</a></h1>    <!--target="_blank" is used to oprn the link in new tab-->
+            <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>  <!--_self is used to open li k in same tab-->
+            <form action="" class="form-control">
+                <input type="text" placeholder="Enter Name">
+                <input type="password" placeholder="Enter Password">
+                <input type="submit" value="Submit">
+            </form>
+            <ul>
+                <li class="item" id="item-1">Item1</li>
+                <li class="item" id="item-2">Item2</li>
+                <li class="item" id="item-3">Item3</li>
+                <li class="item" id="item-4">Item4</li>
+                <li class="item" id="item-5">Item5</li>
+                <li class="item" id="item-6">Item6</li>
+                <li class="item" id="item-7">Item7</li>
+                <li class="item" id="item-8">Item8</li>
+                <li class="item" id="item-9">item9</li>
+                <li class="item" id="item-10">Item10</li>
+            </ul>
+        </div>
+    </body>
+</html>

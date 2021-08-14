@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Size units</title>
+        <style>
+            .html{
+                font-size: 5px;
+            }
+            .container{
+                font-size: 10px;        /*(if html font size is given then this size will not be valid)*/
+                border: 2px solid red;
+                height: 100vh;          /*(to give the border to the full height of the screen
+                if we write 50vh then the border will be half the height)*/
+                width: 100vw;           /*(same as vh but for the full width and so on we can give
+                the values like 70vw, 50vw for half width of border, 30, etc.)*/
+            }
+            h1{
+                text-align: center;
+            }
+            #first{
+                font-size: 3em;        /*(3em means 3 times of the parent size... here parent size is 10px
+                i.e. 3 times 10 is 30px)*/
+                padding: 3em;         /*(here padding is 3 times of the current font size... here
+                current size is 30px as mentioned in the previous line)*/
+            }
+            #second{
+                font-size: 3rem;         /*(rem means 3 times of the main html font size which
+                is given in the start)*/
+                padding: 2rem;         /*(same as abve but here 2 times of rem )*/
+            }
+            #third{
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="first">This is first heading</h1>
+            <h1 id="second">This is second heading</h1>
+            <h1 id="third">This is third heading</h1>
+        </div>
+    </body>
+</html>

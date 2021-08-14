@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* "*" is also one more selector which is also called as universal selector */
+            /* box-sixing means it fixes the width value all the time
+             i.e it doesnt change according to padding */
+            *{
+                box-sizing: border-box;     
+                margin: 0;        /*margin and padding is set to 0 as initial, it is not compulsory to do this*/
+                padding: 0;
+            }
+
+            .heading{
+                font-size: x-large;
+                font-family:'Times New Roman', Times, serif;
+                font-weight: bolder;
+                color: blue;
+                background-color: brown;
+                height: 50px; 
+                width: 100;
+                border: 5px solid yellow;
+                border-radius: 15px;
+                padding: 30px 200px 50px 200px;
+                margin: 50px;                 /*we can also make margin as auto to make in perfectly centre and if we want space from up we can write margin: 30px auto*/
+                /* margin: 50px auto; this is the eg. */
+            }
+            
+            .line{  
+                font-weight: bold;
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+                color: teal;
+                background: tomato;
+                height: 70px;
+                width: 100px;
+                border-top: 5px solid blue;
+                border-left: 5px solid black;
+                border-right: 5px solid rgb(14, 189, 14);
+                border-bottom: 5px solid purple ;
+                border-bottom-right-radius: 25px;
+                border-top-right-radius: 15px;
+                margin: 50px 56px;
+            }
+
+            .bimg{
+                height: 100px;
+                width: 100px;
+                /* to add background image..... but it is not working idk why??? */
+                background-image: url('C:\Users\admin\Desktop\web\WIN_20210622_13_04_03_Pro.jpg');
+            }
+            img{
+                width: 80px;
+            }
+            .container{
+                display: flex;
+                margin: 20px;
+            }
+            .box{
+                padding: 23px 12px;
+                margin: 23px 12px;
+                background-color: cyan;
+                box-shadow: 5px 3px darkcyan;     /*gives shadow to the box*/
+                box-shadow: 5px 3px 10px darkcyan;     /*the third value is for faded shadow radius*/
+            }
+            .box h3{
+                text-shadow: 3px 4px grey;      /*gives shawow to the text*/
+            }
+        </style>
+    <link rel="stylesheet" href="vinayak.css">
+    </head>
+    <title>Vinayak</title>
+    <body>
+        <h1 class="heading">ABOUT VINAYAK</h1>
+      <p class="line">Vinayak is the best</p>  
+      <p class="bimg">hiiiiii its meeee!!!!</p>
+      <a href="http://instagram.com">open instagram</a><br>
+      <a href="http://google.com">open google</a><br>
+      <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">open twitter on new page</a><br>
+      <a href="vinayak.html" target="_blank" rel="noopener noreferrer">html folder</a><br>
+
+      <img src="C:\Users\admin\Desktop\web\WIN_20210622_13_04_03_Pro.jpg" alt="image not found!!">
+      <div class="container">
+          <div class="box">
+              <h3>Box 1</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum ea atque nihil perferendis. Iste asperiores non culpa maxime earum iusto sit vel unde dolorem mollitia. Praesentium tempore iste facilis obcaecati vero maxime quae ut!</p>
+            </div>
+          <div class="box">
+              <h3>Box 2</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, deleniti vitae vel dolorum officia quo voluptatem, quam iste non doloribus delectus fuga dolorem enim maiores similique, eos quibusdam recusandae ipsum totam! Distinctio, sed consequatur!</p>
+          </div>
+          <div class="box">
+            <h3>Box 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi odio, dolorum distinctio quia nisi nemo maxime ratione id, sint quae, magnam eaque nesciunt rerum et at enim totam doloribus earum? Voluptatum, pariatur maxime.</p>              
+          </div>
+      </div>
+    </body>
+</html>

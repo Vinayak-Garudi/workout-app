@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head>
+    <title>media size</title>
+    <style>
+        .box{
+            font-size: 20px;
+            background-color: greenyellow;
+            color: black;
+            text-align: center;
+            display: none;
+        }
+        @media (max-width:500px){                  /*yaha responsive banne wala tha... like isko 
+            use karke bas box1 ka hi dikhta but kuch tho problem hua islea nahi ho raha kuch*/
+            #box1{
+                display: block;
+            }
+        }
+        @media (min-width:500px) and (max-width:700px){      /*same problem*/
+            #box2{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">This is mobile</div>
+    <div class="box" id="box2">This is Tablet</div>
+    <div class="box" id="box3">This is PC</div>
+    <div class="box" id="box4">This is wide screen PC</div>
+</body>
+
+</html>

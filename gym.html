@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Gym</title>
+        <style>
+            /* CSS Reset */
+            body{
+                margin: 0px;
+                padding: 0px;
+                height: 5000px;
+                font-family: 'Josefin Sans', sans-serif;
+                background-color: rgb(150, 182, 182);
+                background-image: url('gymb.jpg');
+                color: white;
+            }
+            .left{
+                display: inline-block;
+                position: absolute;
+                left: 45px;
+                top: 25px;
+                font-size: 14px;
+                font-weight: bold;
+                background-color: black;
+                padding: 2px;
+            }
+            .left div{
+                text-align: center;
+                cursor: pointer;
+                line-height: 8px;
+            }
+            .mid{
+                display: block;
+                width: 45%;
+                margin: 25px auto;
+                border: 2px solid rgb(13, 13, 14);
+                border-radius: 35px;
+                background-color: rgb(13, 13, 14);
+            }
+            .right{
+                display: inline-block;
+                position: absolute;
+                right: 15px;
+                top: 25px;
+            }
+            .navbar{
+                display: inline-block;
+            }
+            .navbar li{
+                display: inline-block;
+                font-size: 18px;
+                text-decoration-color: cornsilk;
+            }
+            .navbar li a{
+                text-decoration: none;
+                color: cornsilk;
+                padding: 15px;
+                margin: 5px;
+            }
+            .navbar li a:hover, .navbar li a.active{
+                text-decoration: underline;
+                color: rgb(178, 217, 233);
+            }
+            .left img{
+                width: 60px;
+                height: 60px;
+            }
+            .btn{
+                margin: 0px 5px;
+                background-color: rgb(218, 231, 230);
+                padding: 2px 15px;
+                border: 2px solid black;
+                border-radius: 14px;
+                font-weight: 700;
+                font-size: 13px;
+                cursor: pointer;
+            }
+            .btn:hover{
+                background-color: rgb(141, 147, 148);
+                text-decoration: underline;
+                color: rgb(1, 8, 12);
+            }
+            .container{
+                border: 2px solid rgb(26, 23, 23);
+                font-size: 12px;
+                width: 40%;
+                margin: 60px 45px;
+                padding: 50px 10px;
+                border-radius: 20px;
+                background-color: black;
+            }
+            .form-group{
+                padding: 10px;
+            }
+            .form-group input{
+                text-align: center;
+                border-radius: 7px;
+            }
+            .gender{
+                padding-bottom: 5px;
+                padding-top: 0px;
+                padding-inline: 4px;
+            }
+            #male{
+                margin-right: 10px;
+            }
+            #female{
+                margin: 0px 10px;
+            }
+            .location{
+                padding-left: 10px;
+                padding-bottom: 20px;
+            }
+            .location input{
+                text-align: center;
+                border-radius: 7px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="header">
+            <!-- left for logo -->
+            <div class="left">
+                <img src="C:\Users\admin\Desktop\web\gyml1.jpg" alt="">
+                <div>Fitness Go</div>
+            </div>
+            <!-- mid for navbar -->
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Fitness Calculator</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <!-- right for buttons -->
+            <div class="right">
+                <button class="btn">Call Us</button>
+                <button class="btn">Email Us</button>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Regester yourself to join the gym!!!</h1>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name ="" placeholder="Enter your name...">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="" placeholder="Enter your age...">
+                </div>
+                <div class="form-group">
+                    What is your gender?
+                    <div class="gender">
+                    Male: <input type="radio" name="Gender" id="male">
+                    Female: <input type="radio" name="Gender" id="female">
+                    Other: <input type="radio" name="Gender" id="other">
+                    </div>
+                </div>
+                <div class="location">
+                    Where do you live?
+                    <input type="text" name="" placeholder="Enter City name...">
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

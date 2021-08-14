@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alignment</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .container{
+                width: 900px;
+                border: 3px solid purple;
+                /* margin: auto;        it automatically shifts the content in the centre */
+                margin: 33px auto;       /* same as auto but here top and bottom is defined*/
+                background: rgb(217, 245, 245);
+            }
+            .item{
+                border: 3px solid grey;
+                margin: 12px 3px;
+                padding: 12px 3px;
+                background: rgb(230, 174, 174);
+            }
+            #fruits{
+                float: left;
+                width: 48%;
+            }
+
+            #computer{
+                float: right;
+                width: 48%;
+            }
+
+            #stationary{
+                /* float: left; */
+                /* clear: left;       for left */   /*similarly for right type right*/
+                clear: both;      /*for both*/
+                width: 100%;
+            }
+
+            p,h3{
+                text-align: center;      /*we can bring text in centre, right, left and also justify*/
+            }
+
+            h1{
+                width: 200px;
+                margin: 5px auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome</h1>
+            <div id="fruits" class="item">
+                <h3>Fruits</h3>
+                <p id="fruitspara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus voluptas vitae perferendis similique at vel. Inventore deleniti illo distinctio facilis
+                     blanditis doloremque itaque natus aperiam a quos, rem ea amet! Fugiat earum expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta iusto id aliquid, earum, porro odit, totam ad nam reprehenderit odio doloribus? Deleniti repellendus eligendi asperiores suscipit eum doloribus odio quod soluta minus. Saepe! dolorum harum?</p>
+            </div>
+            <div id="computer" class="item">
+                <h3>Computer</h3>
+                <p id="computerpara" class="para">ghsfghafh aygfyagfyaf gfuyfgygyfgfyffagfyagfy fuefygfygfejfvfvjg akfeuafhuefheaufuefgefgf fufghaeudgeueaigfauga
+                     aagagueifuieshfu fheaufhuefheif euhfiuehfuef Lorem Lorem ipsum dolor sit amet. ipsum dolor sit amet. ahahfiuahf ahrawjri air warjawihrawhagfayfiuadhiaryigfku uahdha Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo corporis omnis nam adipisci! Sit quia veniam dignissimos magni. Necessitatibus, ratione. Aspernatur velit esse, ratione quae voluptatum suscipit beatae dolores, sit voluptate qui mollitia fuga.</p>
+            </div>
+            <div id="stationary" class="item">
+                <h3>Stationary</h3>
+                <p id="stationarypara" class="para">sukfhsgvs sbhsdfbsdghfusd sdbsgbvydbjdsd sdbjdgudhfukd dbvjdgfdfhukdfs dsbvjdgfjsdghfukdfhudkf fhjgbusdhfukdfd sfbudshfuksdfhdf sfbudhfudsfhudkfhsf fhdsfg
+                    fsvhfsfhb sbfjhfhsudks fkjfhskhjfisdjfsif dsfsdfjsifsf sffhskfhk sfhskfdnkfdsygfs sufhsudfhbusfshfu</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flaxbox</title>
+        <style>
+            .container{
+                border: 3px solid black;
+                height: 551px;
+                width: 100%;
+                display: flex;     /*To initialize flaxbox*/
+
+                /* Flex properties for flex container */
+                flex-direction: row;      /*...(it is set by default)*/
+                /*flex-direction: column;    ...(row ko column me convert karega)
+                flex-direction: row-reverse ;     ...(row me hi rahenge but right side is start hoga fill hona)
+                flex-direction: column-reverse;   ...(column hi rahega but neeche se start hoga fill hona)*/
+                flex-wrap: wrap;        /*(to make the responsive website... ab chota screen hoga tho 
+             boxes neeche neeche aate rahenge )*/
+                /* flex-wrap: wrap-reverse;    ...(boxes neeche aake wrap hona start kar degi) */
+                flex-flow: row wrap;      /*isme flex direction & wrap dono bhi ek sath likh 
+                sakte hai just like margin*/
+                /* justify-content: center;     (content/boxes ko center me laaneke liye) */
+                /* justify-content: space-between;    (give the spaces between the boxes but not from the corner */
+                /* justify-content: space-around;     gives equal spaces on both side of the boxes */
+                /* justify-content: space-evenly;     same as space between but also gives spaces to the corners */
+
+                align-items: center;      /*to make the content vertically center*/
+                /*align-items: flex-end;    (to be in the center but down... similarly flex-start for top 
+                which is by default)*/
+            }                   
+            .item{
+                background-color: tomato;
+                border: 6px solid green;
+                margin: 10px;
+                padding: 2px;
+                width: 200px;
+                height: 200px;
+            }
+            #item-1{
+                /* flex properties for a flex item */
+                /* order: 2;    (bada order matlab utna last ki taraf jaaega ab item-1 & 3 me 3 wala zyada  */
+                /* hai islea 3 wala last me jaaega and 1 wala 2nd last)  */
+                /* flex-grow: 3;       /*(isme specified box ke width badte jaaega resloution ke hisaab se  */
+                /* and jiska bada number uska zyada grow hoga exampke item-1&2) */
+                /* flex-shrink: 3;       (opposite of grow) */
+                /* flex-basis: 320px;     /* (same as width and height but for row width will impliment  */
+                /* and for column height will implement)*/ 
+            }
+            #item-2{
+                flex-grow: 2;
+            }
+            #item-3{
+                /* order: 40; */
+                flex: 10 10 340px;        /* (short end of: flex grow,shrink,basis)*/
+                /* align-self: center;       (takes the third box to the center) */
+                /* align-self: flex-start;    (takes the third box above) */
+                /* align-self: flex-end;      (takes the third box to the bottom) */
+            }
+        </style>
+    </head>
+    <body>
+        <h3>This is Flaxbox tutorial</h3>
+        <div class="container">
+            <div class="item" id="item-1">First Box</div>
+            <div class="item" id="item-2">Second BOX</div>
+            <div class="item" id="item-3">Third Box</div>
+            <div class="item" id="item-4">Fourth Box</div>
+            <div class="item" id="item-5">Fifth BOx</div>
+            <div class="item" id="item-6">Sixth Box</div>
+        </div>
+    </body>
+</html>
