@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <script>
+            console.log("Hello world");
+            /* Data Types:
+            undefined, null, boolean, string, symbol, number and object*/
+            var myName = "Vinayak";    //way to create a variable in js
+            let ourName = "Garudi";    //way to create a variable in js
+            const pi = 3.14;           //way to create a variable in js
+            console.log(myName);
+            console.log(ourName);
+            console.log(pi);
+            //example
+            var a;
+            var b = 2;
+            console.log(a);       //here it will print null or undefined in the console
+            a = 7;
+            b = a;
+            console.log(a);
+            // here it will print 7 for a in the console.
+
+            //another example
+            //Initialize these three variables
+            var x = 5;
+            var y = 10;
+            var z = "I am";
+            // Do not change code below this line
+            x = x + 1;
+            y = y + 1;
+            z = z + " String!";
+            console.log(x);
+            console.log(y);
+            console.log(z);
+            // example over
+
+            // Remainder operator
+            var remainder;
+            remainder = 9 % 2;      // "%" means it will give you the remainder
+            console.log(remainder);     // here remainder will get printed as 1
+
+            //adding variables
+            var name = 'Vinayak';
+            var line = 'hello ' + name + ' how are you?';
+            console.log(line);
+
+            //finding length of the characters/ variables
+            var nameLength = 0;
+            var name = "Garudi";
+            nameLength = name.length;
+            // console.log(nameLenth);     // length of Vinayak is 6
+            // some error is comming idk y so I commented it out
+
+            // to get the nth letter of any character
+            var name = 'Vinayak';
+            var ThirdLetter = "";
+            ThirdLetter = name[2];    // it will give the 3rd letter of thwe name i.e "n"
+            console.log(ThirdLetter);   
+            //to get the letters from the last
+            var LastLetter = name[name.length - 1];  //last letter i.e "k"
+            console.log(LastLetter);
+            var SecondLastLetter = name[name.length - 2]
+            console.log(SecondLastLetter);       //to print 2nd last letter i.e "a"
+
+            //Arrays
+            var group = ["Vinayak", 1, 3.14, 'hello']; 
+            console.log(group);
+            //nested arrays
+            var nestedGroup = [['Vinayak', 1], ['Natsu', 2.0]]
+            console.log(nestedGroup);
+            // get the specific data from the group array
+            var arrayData = group[2];
+            console.log(arrayData);    // here we will get "3.14"
+            //modify arrays
+            group[1] = 20;
+            console.log(group);
+            // nested arrays and modifying threm
+            var nestedArrays = [[1,2,3], [5,6,9], [[4,6,7], 2,14]];
+            console.log(nestedArrays);
+            var myData = nestedArrays[1][2];
+            console.log(myData);    // will print "9"
+            var ourData = nestedArrays[2][0][1];
+            console.log(ourData);    //will print 6
+            
+            // appending data to the end of an array using push function
+            group.push([45, 40, 'Vinayak']);
+            console.log(group);    //appended the array
+            var newGroup = ['Garudi', 'Hello', 'hiii'];
+            console.log(newGroup);
+            newGroup.push('Natsu', 'toap');      //appended normal data not the group or an array
+            console.log(newGroup);
+            newGroup.unshift([99, 'unshift', 5.5]);      //unshift function adds data in the start
+            console.log(newGroup);
+            newGroup.unshift("newGroup");
+            console.log(newGroup);
+
+            //removing items from an array using pop function
+            var popArray = [1,12,35];
+            popArray.pop();           //removes the last element from an array
+            console.log(popArray);    
+            var shiftArray = [45, 'hello', 456, 'hiiii', 54];
+            shiftArray.shift();       // removes the first element from an array
+            console.log(shiftArray);
+
+            //functions
+            function newFunction(){
+                console.log('Hello Vinayak, How you doing??');
+            }
+            newFunction();
+            newFunction();
+            newFunction();     // you can repeat the function by just writing the function name again and again
+            
+            //passing parameters to the function
+            function parameters(a,b){
+                console.log(a+b);
+            }
+            parameters(2,3);     // here the answer will come as 5
+
+            // variables defined inside the function is only limited to that function
+            function innerVar(){
+                var myVar = 99;
+                console.log(myVar);
+            }
+            /* console.log(myVar);   .... here it will show error because it will
+            not be able to read because the variable is defined inside the function*/
+            innerVar();
+            // another example
+            var myOutfit = 'shirt';
+            function outerWear(){
+                var myOutfit = 'sweater';
+                return myOutfit;
+            }
+            console.log(outerWear());    /*here it will print "sweater" because it will
+                                           consider the variable inside the function
+                                           even if the outer variable has the same name*/
+            console.log(myOutfit);     /* here the value will come as "shirt" as it didn't
+                                        call the local variable it called the global variable which is outside
+            
+            //return a value from the function*/
+            function minusSeven(num){
+                return num - 7;
+            }
+            console.log(minusSeven(10));    //here 10-7 ans will print as 3
+            //another similar example
+            function timesFive(a){
+                return a*5;
+            }
+            console.log(timesFive(10));    // 10*5=50
+
+            // if statement
+            function trueOrFalse(isIttrue){
+                if(isIttrue){
+                    return 'yes, it is true';
+                }
+                return 'no, it is false';
+            }
+            console.log(trueOrFalse(true));   /*"true" is written inside the bracket hence
+                                                it returnes 'yes, it is true' if nothing or anything else 
+                                                was there then it would return false value*/
+            
+            // another if example
+            function equalTen(num){
+                if (num == 10){
+                    return 'the number equal to 10';
+                }
+                return 'the number is not equal to 10';
+            }
+            console.log(equalTen(24));
+
+            //strict equal operator
+            function equalTen(num){
+                if (num === 10){
+                    return 'the number equal to 10';
+                }
+                return 'the number is not equal to 10';
+            }
+            console.log(equalTen('10'));   //even is it it 10 but it will say it is not equal to 10
+                                           // because of strict equal operator the 10 in the console is
+                                           // in string form whereas in the if statement is number
+            // non equality operator
+            function equalTen(num){
+                if (num != 10){
+                    return 'the number not equal to 10';
+                }
+                return 'the number is equal to 10';
+            }
+            console.log(equalTen(24));
+            // strict inequality operator
+            function equalTen(num){
+                if (num !== 10){
+                    return 'the number not equal to 10';
+                }
+                return 'the number is equal to 10';
+            }
+            console.log(equalTen(10));   //similar to strict equality operator
+            //number comparision eg 1
+            function comparision(num){
+                if (num > 20){
+                    return 'greater or equal to 20';
+                }
+                if (num > 10){
+                    return 'greater than or equal to 10';
+                }
+                return 'less than 10';
+            }
+            console.log(comparision(50));
+            //number comparision eg 2
+            function comparision(num){
+                if (num >= 20){
+                    return 'greater or equal to 20';
+                }
+                if (num >= 10){
+                    return 'greater than or equal to 10';
+                }
+                return 'less than 10';
+            }
+            console.log(comparision(10));
+            //if statement another eg of being 2 or more conditions true
+            function multiTrue(num){
+                if (num <= 50){
+                    if (num >= 25){
+                        return 'the number is between 25 and 50';
+                    }
+                }
+                return 'the number is not beteen 25 and 50';
+            }
+            console.log(multiTrue(40));
+            //for 2 conditions and operator(&&) can also be used
+            function andOperator(num){
+                if (num <=50 && num >= 25){
+                    return 'the number lies between 25 and 50';
+                }
+                return 'the number does not lie between 25 and 50';
+            }
+            console.log(andOperator(28));
+            // or statements i.e. ||
+            function orStatement(num){
+                if (num < 20 || num > 50){   
+                    return 'outside the range';
+                }
+                return 'inside the range';
+            }
+            console.log(orStatement(18));
+            
+            //else statements
+            function elseStatement(num){
+                var result = '';
+                if (num > 5){
+                    result = 'bigger than 5';
+                } else{
+                    result = 'smaller than 5';
+                }
+                return result;
+            }
+            console.log(elseStatement(4));
+            //else is statements
+            function elif(num){
+                if (num > 10){
+                    return 'greater than 10';
+                } else if (num < 5){
+                    return 'less than 5';
+                }
+                else {
+                    return 'between 5 and 10';
+                }
+            }
+            console.log(elif(7));
+            // else if statements chain
+            function chain(num){
+                if (num < 5){
+                    return 'tiny number';
+                } else if (num < 15){
+                    return 'small number';
+                } else if (num < 25){
+                    return 'medium ny=umber';
+                } else if (num < 100){
+                    return 'big number';
+                } else if (num < 400){
+                    return 'huge number';
+                } else {
+                    return 'really huge number';
+                }
+            }
+            console.log(chain(4555));
+
+            //switch statements    ....similar to if statements
+            function CaseSwtitch(val){
+                var answer = '';
+                switch(val) {
+                    case 1:
+                    answer = 'alpha';
+                    break;
+                    case 2:
+                    answer = 'beeta';
+                    break;
+                    case 3:
+                    answer = 'gamma';
+                    break;
+                    case 4:
+                    answer = 'sigma';
+                    break;
+                    default:          //similar to else if some other value is given then it will give the default value
+                    answer = 'signs';  
+                }
+                return answer;
+            }
+            console.log(CaseSwtitch(2));
+            // switch statements for multiple inputs
+            function multiSwitch(val){
+                var answer = '';
+                switch(val) {
+                    case 'a':
+                    case 'b':
+                    case 'c':
+                    answer = 'smaller range';
+                    break;
+                
+                    case 'd':
+                    case 'e':
+                    case 'f':
+                    answer = 'larger range';
+                    break;
+                }
+                return answer;
+            }
+            console.log(multiSwitch('b'));
+            
+            // return
+            //returning boolean values
+            function returnNum(a,b){
+                return a < b;
+            }
+            console.log(returnNum(10,20));    //here 10 is less than 20 hence it will print "true"
+
+            //objects
+            var baby = {
+                'name' : 'Piku',
+                'age' : '2',
+                'friends' : ['Vinayak', 'Paapu', 'Mintu', 'Spiderman']
+            };     //it will give you the properties of specific variable/object
+            console.log(baby.name);   //it will print the name i.e. "Piku" by using dot "."
+            //similarly
+            console.log(baby.age);
+            console.log(baby.friends);
+
+            //accesing object properties with variables
+            var roll = {
+                7: 'Natsu',
+                9: 'Toap',
+                18: 'Dul-Dul'
+            };
+            var studentNumber = 18;
+            var student = roll[studentNumber];
+            console.log(student);   //it will print Dul-Dul
+
+            //changing the object properties
+            baby.name = 'Sinzo';      //this object is in line 339
+            console.log(baby.name);    //the property i.e. name is changed to "Sinzo"
+            //adding new properties to the object
+            baby.language = 'Baby Language';   //object is in line 339
+            console.log(baby.language);
+            //properties can also be added by using brackets
+            baby['gender'] = 'good girl';
+            console.log(baby.gender);
+            //deleting properties
+            var deleteProperty = {
+                'deleteOne' : 'one',
+                'deleteTwo': 'two',
+                'deleteThree': 'three',
+                'deleteFour': 'four'
+            };
+            delete deleteProperty.deleteTwo;   //delete property from an object
+            console.log(deleteProperty);
+            //checking objects if it is there or not 
+            function checkBaby(checkProperty) {
+                if (baby.hasOwnProperty(checkProperty)) {      //writing "hasOwnProperty" is important
+                    return baby[checkProperty];
+                } else {
+                    return 'not found';
+                }
+            }
+            console.log(checkBaby('name'));      
+            console.log(checkBaby('overthinking'));
+            //accessing nested objects
+            var nested_objects = {
+                'car': {
+                    'seat': {
+                        'front seat': 'seat belt',
+                        'seatNum': 'five'
+                    },
+                    'doors': {
+                        'material': 'steel'
+                    }
+                }
+            };
+            var carProperties = nested_objects.car.seat['front seat'];
+            console.log(carProperties);
+            
+            //accesing nested arrays
+            var objects_arrays = [
+                {
+                    type: 'flowers',
+                    list: ['rose', 'tulip', 'lily']
+                },
+                {
+                    type: 'trees',
+                    list: ['mango', 'neem', 'coconut']
+                }
+            ];
+            var plants = objects_arrays[0].list[1];   //1st array i.e. flowers 2nd number i.e. tulip
+            var trees = objects_arrays[1].list[2];    //2st array i.e. trees 3rd number i.e. coconut
+            console.log(plants);
+            console.log(trees);
+            
+            //while loops
+            var myArray = [];
+            var i = 2;     //since inital value of i is set to 2 hence the array will start with 2 
+            while(i < 10) {
+                myArray.push(i);
+                i = i+1;      // here you can also write i++
+            }
+            console.log(myArray);
+
+            //for loop
+            var ourArray = [];
+            for (var i = 0; i<10; i++){
+                ourArray.push(i);
+            }
+            console.log(ourArray);
+            //iterating odd or even numbers using for loops
+            var oddNumbers = [];
+            for (var i = 1; i<10; i += 2){    //to get even numbers put i = 0
+                oddNumbers.push(i);
+            }
+            console.log(oddNumbers);
+            //counting backwards using for loop
+            var backwards = [];
+            for (var i =10; i>=1; i--){
+                backwards.push(i);
+            }
+            console.log(backwards);
+            //counting even numbers backwards
+            var evenBack = [];
+            for (i=10; i>0; i-=2){    // for odd numbers put i=9   also be written as i=i-2
+                evenBack.push(i);
+            }
+            console.log(evenBack);
+            //iterating values from an aray using for loop
+            var set = [5, 10, 15, 20];
+            var setTotal = 0;
+            for (i=0; i < set.length; i++){    
+                setTotal = setTotal + set[i];  // add all the numbers in the set variable
+            }
+            console.log(setTotal);
+            //nesting for loops
+            function multiply(array) {
+                var product = 1;
+                for (var i = 0; i < array.length; i++){
+                    for (var j = 0; j < array[i].length; j++){
+                        product *= array[i][j];
+                    }
+                }
+                return product;
+            }
+            console.log(multiply([1,2],[2,3],[10,5,2]));     /*some problem is occuring
+            it is not multiplying it is only giving the value as 1*/
+
+
+            //iterate with do.... while loops
+            var doWhile = [];
+            var i = 10;
+            do{       /*it print nothing if it was while loop but
+                here it is do...while it will print at least
+                once even if it dosen't satisfy the condition*/
+                doWhile.push(i);
+                i=i+1;
+            } while (i < 5)
+            console.log(i, doWhile);
+
+            //profile lookup... some practice... coding challenge
+            var accounts = [
+                {
+                    'name' : 'Vinayak',
+                    'number' : '8652045445',
+                    'followers' : '10000000',
+                    'close friends' : ['Divya', 'Pravin', 'Mitali']
+                },
+                {
+                    'name' : 'Garudi',
+                    'number': '4646468445', 
+                    'followers': '900000000',
+                    'close friends': ['Mand', 'Natsu', 'Mintu']
+                },
+                {
+                    'name': 'Toap',
+                    'number': '1214844545',
+                    'followers': '100000000165',
+                    'close friends': ['Spiderman', 'Iron Man', 'Thor']
+                }
+            ];
+
+            function checkAccounts(object,property) {
+                for (i=0; i < accounts.length; i++) {
+                    if (accounts[i].name == object) {
+                        return accounts[i][property] || 'no such property';
+                    }
+                } 
+                return 'no such name';
+            }
+            var data = checkAccounts('Vinayak', 'close friends');
+            console.log(data);
+
+            //ternary operator to use as if else statements in one line
+            function checkSign(num){
+                return num > 0 ? 'positive number' : num < 0 ? 'negative number' : 'zero';
+            }
+            console.log(checkSign(10));
+            console.log(checkSign(0));
+            console.log(checkSign(-10));
+
+            //difference between var and let
+            /* var can be changed again but let does not allow you to change the value again*/
+            /* var is globally defined but let is mostly locally defined or inside a function*/
+
+            //const....
+            /*const is used when we do not want to change the variable again
+            whereas in var we can mauplate or change the variable*/
+            const PI_VALUE = 3.14;
+            /*here while using const it is preferred to use upper case characters to 
+            easily identify that it is the const*/
+
+            //mutate an arrray declared with const
+            const s = [2,3,6];     //here we can change the values in const as follows
+            function editPosition() {
+                s[0] = 3;
+                s[1] = 10;
+                s[2] = 2;
+            }
+            editPosition();
+            console.log(s);
+
+            //prevent object mutation..... how to prevent object from changing
+            /*as from the above example the values can still be manuplated in const
+            but now you will get how to fix the value forever*/
+            const TETHA = 45;
+            Object.freeze(TETHA);     //Object.freeze will help to fix the value forever
+            console.log(TETHA);
+            
+            //spread operator
+            const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+            let arr2;
+            function spreadOpertor(){
+                arr2 = [...arr1];
+                arr1[0] = 'mango';    /*here it should ideally print "mango" instead of
+                                    "JAN" but using spread operator(...)
+                                    it will print the initial value only i.e. "JAN"*/
+            }
+            spreadOpertor();
+            console.log(arr2);
+
+            //**** it is fine if you only learn till this line*****//
+
+            //Destructuring
+            var values = {x: 9, y: 18, z: 7};
+            //(old way of assigning variables)
+            // var x = values.x;   .... x=9
+            // var z = values.z;    ....z=7
+
+            //(new way is as follows)
+            const {x : p, y : q, z: r} = values;
+            //muje bhi itna samja nahi but aage dekh lenge
+
+            //destructuring Assignment with nested objects
+            const forecast = {
+                today : {min: 18, max: 22},
+                tomorrow : {min: 16, max: 20}
+            };
+            function tomorrow_cast(cast) {
+                const {tomorrow: {max: max_tomorrow}} = cast;
+                return max_tomorrow;
+            }
+            console.log(tomorrow_cast(forecast));
+
+            //destructing assignment to assign variables from arrays
+            var [u,v, ,w] = [1,2,3,4,5,6];
+            console.log(u,v,w);     //it should print 1,2,4
+
+            //another example
+            var u = 5;
+            var v = 11;
+            function uno() {
+                [u,v] = [v,u];     // here u will be equal to 11 and v will be 5
+            }
+            uno();
+            console.log(u);
+            console.log(v);
+        </script>
+    </body>
+</html>
